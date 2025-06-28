@@ -25,7 +25,7 @@ target_version=$1
 download_url_base='https://github.com/takahiro-itou'
 download_url_base+='/LibraryTemplate/releases/download'
 archive_name="Sample-${target_version}.tar.gz"
-download_url="${download_url_base}/v${target_version}/${archive_name}"
+download_url="${download_url_base}/v1.2.0/${archive_name}"
 
 installer_dir="${script_dir}/.downloads"
 installer_file="${installer_dir}/${archive_name}"
