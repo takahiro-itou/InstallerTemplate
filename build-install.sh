@@ -23,7 +23,7 @@ target_version=$1
 ##    2.  ファイルの確認とダウンロード
 ##
 
-target_prefix=$(readlink -m "${install_base_dir}/python-${target_version}")
+target_prefix=$(readlink -m "${install_base_dir}/Sample/${target_version}")
 if "${target_prefix}/Bin/SampleApplication" --version ; then
     # インストール済みなので何もしない
     echo  "Already installed in ${target_prefix}"   1>&2
