@@ -21,5 +21,5 @@ env  -i                 \
     USER=${_user}       \
     HOME=${_home}       \
 /bin/bash  -xue     \
-    "${script_dir}/install.sh"  "$@"    \
+    "${script_dir}/build-install.sh"  "$@"  \
     ||  exit  $?
