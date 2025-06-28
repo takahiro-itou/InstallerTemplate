@@ -4,7 +4,7 @@ current_srcfile=${BASH_SOURCE:-$0}
 script_dir=$(readlink -f "$(dirname "${current_srcfile}")")
 
 project_name='python3'
-source  "${script_dir}/common-config.rc"
+source  "${script_dir}/config/common-config.rc"
 
 umask  0022
 
