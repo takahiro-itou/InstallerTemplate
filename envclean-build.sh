@@ -1,7 +1,7 @@
 #!/bin/bash  -ue
 
-script_file=${BASH_SOURCE:-$0}
-script_dir=$(readlink -f "$(dirname "${script_file}")")
+current_srcfile=${BASH_SOURCE:-$0}
+script_dir=$(readlink -f "$(dirname "${current_srcfile}")")
 
 unset   LD_LIBRARY_PATH
 unset   LIBRARY_PATH
@@ -21,6 +21,5 @@ env  -i                 \
     USER=${_user}       \
     HOME=${_home}       \
 /bin/bash  -xue     \
-    "${script_dir}/install-python.sh"  "$@"   \
+    "${script_dir}/install.sh"  "$@"    \
     ||  exit  $?
-
