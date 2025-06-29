@@ -15,7 +15,7 @@ umask  0022
 ##
 
 target_version=$1
-: ${install_base_dir:=$2}
+install_base_dir=${2:-"${install_base_default}"}
 
 
 ##################################################################
@@ -57,7 +57,7 @@ sleep 5
 ##    4.  対象ディレクトリにインストール
 ##
 
-: ${build_base_dir:="${install_base_dir}/builds"}
+build_base_dir="${install_base_dir}/builds"
 
 sample_configure_opts='--with-cppunit=no'
 
